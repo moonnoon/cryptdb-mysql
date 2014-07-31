@@ -8,8 +8,7 @@ udf:	$(OBJDIR)/udf/edb.so
 
 $(OBJDIR)/udf/edb.so: $(OBJDIR)/udf/edb.o \
 		      $(OBJDIR)/libedbcrypto.a \
-		      $(OBJDIR)/libedbutil.a \
-		      $(OBJDIR)/../udf/edb.cc
+		      $(OBJDIR)/libedbutil.a
 	$(CXX) -shared -o $@ $< $(LDFLAGS) \
 	       $(OBJDIR)/libedbcrypto.a \
 	       $(OBJDIR)/libedbutil.a \
