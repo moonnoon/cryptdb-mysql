@@ -12,7 +12,8 @@ $(OBJDIR)/udf/edb.so: $(OBJDIR)/udf/edb.o \
 	$(CXX) -shared -o $@ $< $(LDFLAGS) \
 	       $(OBJDIR)/libedbcrypto.a \
 	       $(OBJDIR)/libedbutil.a \
-	       -lcrypto -lntl -lgmp
+	       -lcrypto -lntl -lgmp \
+		   -I .
 
 #install mysql server
 install: install_udf
