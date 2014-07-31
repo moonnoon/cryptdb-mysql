@@ -1,2 +1,2 @@
-For mysql server
+Crypdb UDF for mysql server
 ===============
