@@ -40,7 +40,7 @@ install:
 
 .PHONY: clean
 clean:
-	rm -rf $(OBJDIR)
+	@rm -rf $(OBJDIR)
 
 .PHONY: doc
 doc:
