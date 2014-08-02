@@ -1,4 +1,4 @@
-#OBJDIRS	+= udf
+OBJDIRS	+= udf
 #OBJDIR=/data/cryptdb/obj
 MYSQL_PLUGIN_DIR= /usr/lib/mysql/plugin
 
