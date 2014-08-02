@@ -70,5 +70,6 @@ $(OBJDIR)/%.o: $(OBJDIR)/%.cc
 	@mkdir -p $(@D)
 	$(CXX) -MD $(CXXFLAGS) -c $< -o $@
 
+include crypto/Makefile
+include util/Makefile
 include udf/Makefile
-
