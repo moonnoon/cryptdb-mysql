@@ -1,5 +1,4 @@
 OBJDIRS	+= udf
-#OBJDIR=/data/cryptdb/obj
 MYSQL_PLUGIN_DIR= /usr/lib/mysql/plugin
 
 all:	udf
@@ -14,11 +13,9 @@ $(OBJDIR)/udf/edb.so: $(OBJDIR)/udf/edb.o \
 		$(OBJDIR)/libedbutil.a \
 		-lcrypto -lntl -lgmp
 
-#install mysql server
 install: install_udf
 
 .PHONY: install_udf
 install_udf: $(OBJDIR)/udf/edb.so
 	install -m 644 -g mysql -o mysql $(OBJDIR)/udf/edb.so $(MYSQL_PLUGIN_DIR)
 
-# vim: set noexpandtab:
